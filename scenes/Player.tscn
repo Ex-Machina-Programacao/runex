@@ -37,22 +37,18 @@ atlas = ExtResource( 1 )
 region = Rect2( 288, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 96, 0, 32, 32 )
 
@@ -83,3 +79,7 @@ playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 3, -12, 3, -11, 2, -11, 2, -10, 1, -10, 1, -9, 0, -9, 0, -5, 1, -5, 1, -4, -2, -4, -2, -5, -7, -5, -7, -4, -8, -4, -8, -3, -10, -3, -10, -2, -11, -2, -11, 0, -13, 0, -13, 5, -11, 5, -11, 6, -10, 6, -10, 7, -8, 7, -8, 8, -6, 8, -6, 9, -1, 9, -1, 10, -2, 10, -2, 11, -3, 11, -3, 12, -5, 12, -5, 13, -6, 13, -6, 15, -5, 15, -5, 16, 2, 16, 2, 13, 3, 13, 3, 12, 6, 12, 6, 13, 7, 13, 7, 15, 8, 15, 8, 16, 13, 16, 13, 15, 14, 15, 14, 11, 13, 11, 13, 10, 11, 10, 11, 9, 11, 8, 11, 4, 12, 4, 12, 1, 13, 1, 13, -1, 12, -1, 12, -2, 11, -2, 11, -9, 10, -9, 10, -10, 8, -12 )
+
+[node name="TimerCoyote" type="Timer" parent="."]
+
+[connection signal="timeout" from="TimerCoyote" to="." method="on_coyote_timer_timeout"]
