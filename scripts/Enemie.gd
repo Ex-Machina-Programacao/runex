@@ -1,13 +1,12 @@
 extends Area2D
 
-const POSICOES_Y = [175]
+const POSICOES_Y = [130, 140]
 
-var velocidade = 4
-var posicao_y = 175
+var velocidade = 3
 
 func _ready():
-	position.x = 380
-	posicao_y = POSICOES_Y[0]
+	position.x = 460 # fora da tela até para ultrawide
+	position.y = POSICOES_Y[randi() % 2]
 
 func _physics_process(delta):
 	position.x -= velocidade
