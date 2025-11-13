@@ -16,37 +16,47 @@ extents = Vector2( 14, 7 )
 script = ExtResource( 8 )
 
 [node name="Background" type="Node2D" parent="."]
+position = Vector2( 0, -5 )
+scale = Vector2( 2.5, 1.125 )
 
 [node name="Sky" type="Sprite" parent="Background"]
-scale = Vector2( 1.875, 1.125 )
 texture = ExtResource( 6 )
 centered = false
+script = ExtResource( 2 )
+velocidade = 2.0
+
+[node name="Sky2" type="Sprite" parent="Background"]
+position = Vector2( 256, 0 )
+texture = ExtResource( 6 )
+centered = false
+script = ExtResource( 2 )
+velocidade = 2.0
 
 [node name="Cloud1_1" type="Sprite" parent="Background"]
-scale = Vector2( 1.875, 1.125 )
 texture = ExtResource( 5 )
 centered = false
 script = ExtResource( 2 )
+velocidade = 0.7
 
 [node name="Cloud1_2" type="Sprite" parent="Background"]
-position = Vector2( 480, 0 )
-scale = Vector2( 1.875, 1.125 )
+position = Vector2( 256, 0 )
 texture = ExtResource( 5 )
 centered = false
 script = ExtResource( 2 )
+velocidade = 0.7
 
 [node name="Cloud2_1" type="Sprite" parent="Background"]
-scale = Vector2( 1.875, 1.125 )
 texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 2 )
+velocidade = 0.5
 
 [node name="Cloud2_2" type="Sprite" parent="Background"]
-position = Vector2( 480, 0 )
-scale = Vector2( 1.875, 1.125 )
+position = Vector2( 256, 0 )
 texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 2 )
+velocidade = 0.5
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
 
@@ -71,6 +81,10 @@ wait_time = 0.2
 autostart = true
 
 [node name="Hud" parent="." instance=ExtResource( 9 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 242, 134 )
+zoom = Vector2( 0.75, 0.75 )
 
 [connection signal="timeout" from="TimerEnemie" to="." method="_on_TimerEnemie_timeout"]
 [connection signal="timeout" from="TimerScore" to="." method="_on_TimerScore_timeout"]
