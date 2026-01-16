@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/backGmenu.png" type="Texture" id=1]
+[ext_resource path="res://scenes/config.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ranking.gd" type="Script" id=3]
+[ext_resource path="res://scenes/sair.gd" type="Script" id=4]
+
+[node name="menu" type="Node2D"]
+
+[node name="fundoMenu" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 1 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="config" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 104.0
+margin_right = 280.0
+margin_bottom = 124.0
+rect_pivot_offset = Vector2( 24, 10 )
+action_mode = 0
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ranking" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 135.0
+margin_right = 280.0
+margin_bottom = 141.0
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sair" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 164.0
+margin_right = 280.0
+margin_bottom = 174.0
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="config" to="config" method="_on_config_pressed"]
+[connection signal="pressed" from="ranking" to="ranking" method="_on_ranking_pressed"]
+[connection signal="pressed" from="sair" to="sair" method="_on_sair_pressed"]

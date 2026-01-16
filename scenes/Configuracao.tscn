@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BitmapFont" id=1]
+
+[node name="Configuração" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 1.0
+margin_right = 479.0
+margin_bottom = 269.0
+color = Color( 0.639216, 0.929412, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 9.0
+margin_top = 8.0
+margin_right = 468.0
+margin_bottom = 260.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/mono_font = SubResource( 1 )
+text = "                                              Configuração 
+	 
+								 Musica 
+
+
+								 Sons
+
+
+								 Narração 
+
+
+								 Alto Contraste 
+
+
+								 Eletromiografia 
+							 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 253.0
+margin_top = 23.0
+margin_right = 329.0
+margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
